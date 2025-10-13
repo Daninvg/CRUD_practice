@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('tareas', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('titulo');
+            $table->text('descripcion');
+           // $table->timestamps();
         });
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse tshe migrations.
      */
     public function down(): void
     {

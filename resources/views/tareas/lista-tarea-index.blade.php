@@ -21,16 +21,16 @@
             </tr>
         </thead>
         <tbody>
-            @foreach
+            @foreach ($tareas as $tarea)
                 <tr>
                     <td> {{ $tarea->id }} </td>
                     <td> 
-                        <a href="{{ route('tarea.show, $tarea->id') }}">
+                        <a href="{{ route('tarea.show', $tarea->id) }}">
                             {{ $tarea->titulo }}
                         </a> 
                     </td>
                    <td>
-                    <a href="{{ route('tarea.edit, $tarea->id') }}"> Editar </a>
+                    <a href="{{ route('tarea.edit', $tarea->id) }}"> Editar </a>
                    </td>
                 </tr>
             @endforeach
