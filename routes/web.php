@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlumnosController;
 use App\Http\Controllers\TareaController;
 use App\Models\Tarea;
 use Illuminate\Support\Facades\Route;
@@ -14,7 +15,9 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+//Resourses de las dos tablas para usar las rutas.     
 Route::resource('tarea', TareaController::class);
+Route::resource('alumno', AlumnosController::class);
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
