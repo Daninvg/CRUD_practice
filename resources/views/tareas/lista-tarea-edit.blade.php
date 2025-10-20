@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Editar tarea</h1>
-    <!--@include('form-error')-->
+    @include('formulario-error')
     <form action="{{ route('tarea.update', $tarea->id) }}" method="POST">
         @csrf
         @method('PATCH')
