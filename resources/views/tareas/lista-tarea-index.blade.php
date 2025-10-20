@@ -15,9 +15,9 @@
     <table border="1">
         <thead> 
             <tr>
-                <th>ID.</th>
-                <th>Tarea.</th>
-                <th>Descripcion.</th>
+                <th>ID</th>
+                <th>Titulo</th>
+                <th>Descripcion</th>
             </tr>
         </thead>
         <tbody>

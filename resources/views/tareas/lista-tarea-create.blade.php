@@ -9,20 +9,22 @@
 <body>
     <h1>Creación de nueva tarea</h1>
 
+    @include('formulario-error')
+
     <form action="{{ route('tarea.store') }}" method="POST">
         @csrf
-        <label for="titulo">Título:</label>
+        <label for="titulo">Titulo:</label>
         <input
             type="text"
             id="titulo"
             name="titulo"
             value="{{ old('titulo') }}"
             >
-      
+     
         <br>
-        <label for="descripcion">Descripción:</label>
+        <label for="descripcion">Descripcion:</label>
         <textarea id="descripcion" name="descripcion">{{ old('descripcion') }}</textarea>
-      
+   
         <br>
         <button type="submit">Guardar</button>
     </form>
