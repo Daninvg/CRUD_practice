@@ -33,7 +33,7 @@
                     <a href="{{ route('tarea.edit', $tarea->id) }}"> Editar </a>
                       <form action=" {route('tarea.destroy', tarea->id)}" method="POST">
                         @csrf
-                        @method ('DELETE');
+                        @method ('DELETE')
                         <button type="submit"> Eliminar </button>
                       </form>
 
