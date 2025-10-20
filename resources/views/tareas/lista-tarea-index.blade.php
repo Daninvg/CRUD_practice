@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tareas</title>
 </head>
 <body>
-    <h1>El menu de las tareas</h1><br>
+    <h1>Lista de tareas</h1><br>
     <ul>
         <li>
             <a href="{{ route('tarea.create')}}">Aqui puedes crear tu tarea.</a>
@@ -31,6 +31,12 @@
                     </td>
                    <td>
                     <a href="{{ route('tarea.edit', $tarea->id) }}"> Editar </a>
+                      <form action=" {route('tarea.destroy', tarea->id)}" method="POST">
+                        @csrf
+                        @method ('DELETE');
+                        <button type="submit"> Eliminar </button>
+                      </form>
+
                    </td>
                 </tr>
             @endforeach
