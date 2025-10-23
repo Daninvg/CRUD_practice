@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->float('codigo');
             $table->string('nomb');
-            $table->string('correo');
+            $table->string('correo')->unique();
             $table->string('fecha_nacimiento');
             $table->string('sexo');
             $table->string('carrea');

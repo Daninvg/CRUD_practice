@@ -9,7 +9,7 @@
 <body>
     <h1>Editar tarea</h1>
     @include('formulario-error')
-    <form action="{{ route('tarea.update', $tarea->id) }}" method="POST">
+    <form action="{{ route('tarea.update'), $tarea->id   }}" method="POST">
         @csrf
         @method('PATCH')
         <label for="titulo">Título:</label>
